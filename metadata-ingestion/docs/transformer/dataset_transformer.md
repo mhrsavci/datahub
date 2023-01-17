@@ -881,7 +881,7 @@ in both of the cases domain should be provisioned on DataHub GMS
 - Add domains, however replace existing domains sent by ingestion source
 ```yaml
     transformers:
-      - type: "pattern_add_dataset_ownership"
+      - type: "pattern_add_dataset_domain"
         config:
           replace_existing: true  # false is default behaviour
           domain_pattern:
@@ -892,7 +892,7 @@ in both of the cases domain should be provisioned on DataHub GMS
 - Add domains, however overwrite the domains available for the dataset on DataHub GMS
 ```yaml
       transformers:
-        - type: "pattern_add_dataset_ownership"
+        - type: "pattern_add_dataset_domain"
           config:
             semantics: OVERWRITE  # OVERWRITE is default behaviour 
             domain_pattern:
@@ -903,7 +903,7 @@ in both of the cases domain should be provisioned on DataHub GMS
 - Add domains, however keep the domains available for the dataset on DataHub GMS
 ```yaml
       transformers:
-        - type: "pattern_add_dataset_ownership"
+        - type: "pattern_add_dataset_domain"
           config:
             semantics: PATCH
             domain_pattern:
